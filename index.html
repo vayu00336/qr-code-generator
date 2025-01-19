@@ -1,26 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
-    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial- "> 
+    <title>Qr code generator</title>
+    <style> 
+        body,html{
+            margin: 0;
+            padding: 0;
+            height: 100;
+
+        }
+        .container{
+            background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+        }
+        .input{
+        background-color: white;
+        padding: 50x 100px;
+        text-align: center;
+        border: 5px solid black;
+        border-radius: 20px;
+        }
+        p{
+            font-size: 200%;
+
+        }
+        input{
+            height: 50px;
+            width: 200;
+            border-radius: 20px;
+        }
+button:hover{ 
+    transform: scale(1.05);
+background-color: white;
+}
+
+    </style>
+    
 </head>
 <body>
-    <h1>QR Code Example</h1>
 
-    <!-- This is where the QR code will be rendered -->
-    <div id="qrcode"></div>
+    <div class="container">
+    <div class ="input">
+    <p>Qr Code Generate</p>
+    <input type="text" id = "inputtext" placeholder="Enter">
+    <button oneclick="generate()">generate Qr</button>
+</div>
+<div class="Qr">
+<div class="img">
+    <img src ="" id = "imgQr"><br><br>
+</div>
+</div>
+</div>
 
-    <script>
-        // The data you want to encode in the QR code
-        const data = "https://www.example.com"; // You can change this to any URL or text
-
-        // Generate QR code
-        QRCode.toCanvas(document.getElementById('qrcode'), data, function (error) {
-            if (error) console.error(error);
-            console.log("QR code generated successfully!");
-        });
-    </script>
+</script>
+// string concatination
+let inputtext = document.getElementryById("inputtext");
+let img = document.getElementryById("imgqr");
+function generate(){
+    imgqr.src
+}
 </body>
 </html>
